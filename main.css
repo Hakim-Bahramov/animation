@@ -1,0 +1,77 @@
+body{
+	font-family: sans-serif;
+	background-color: #e6f7ff;
+}
+.wrapper{
+	width: 1200px;
+	margin: 4rem auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+.box{
+	width: 130px;
+	height: 130px;
+	text-align: center;
+	border-radius: 40px;
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+}
+img{
+	width: 40px;
+	margin-top: 45px;
+}
+.animation{
+	width: 200px;
+	height: 250px;
+	top: 3rem;
+	left: -11rem;
+	position: absolute;
+	transform: rotateZ(-45deg);
+}
+.box:hover .animation{
+	animation: hover 0.8s forwards;
+}
+.box:hover .image-2{
+	animation: image 0.15s 0.1s forwards;
+	display: inline-block;
+}
+.twitter, .scype{
+	background-color: #00ccff;
+}
+.google{
+	background-color: #ff5050;
+}
+.dribble{
+	background-color: #ff3399;
+}
+.facebook{
+	background-color: #003cb3;
+}
+@keyframes hover{
+	0%{
+		top: 3rem;
+		left: -11rem;
+	}
+	25%{
+		top: -4rem;
+		left: 2rem;
+	}
+	100%{
+		top: -1rem;
+		left: -1.5rem;}
+}
+.image-2{
+	position: absolute;
+	right: 35%;
+	display: none;
+}
+@keyframes image{
+	from{
+		transform: scale(1);
+	}
+
+	to{
+		transform: scale(1.2);
+	}
+}
